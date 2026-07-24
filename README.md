@@ -1,4 +1,4 @@
-A collection of develepor and testing tools  *"Built by me 10 years old from BROS Studios".
+A collection of develeper and testing tools  *"Built by me 10 years old from BROS Studios".
 Works without Internet and Offline with download
 
 #About
