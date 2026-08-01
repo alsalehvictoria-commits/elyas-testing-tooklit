@@ -12,7 +12,7 @@ spellcheck='false'
 <textarea
 id='jsBox'
 placeholder='Javascript'
-onkeyup='window.onerror =(m) => log.value = m;eval(jsBox.value)'
+onkeyup="try{log.value='';document.write='';new Function(this.value)();}catch(err){log.value=err.message;}"
 style='width:400px;height:33%;color:lightblue;background-color:#0f0f0f;resize:none'
 spellcheck='false'
 ></textarea><br>
@@ -39,7 +39,7 @@ top:80.1%;
 width:452px;
 height:17%;
 left:410px;
-color:red;
+color:green;
 resize:none;
 background-color:#0f0f0f'
 spellcheck='false'
@@ -55,7 +55,7 @@ top:80.1%;
 width:452px;
 height:17%;
 left:865px;
-color:blue;
+color:red;
 resize:none;
 outline:none;
 background-color:#0f0f0f'
