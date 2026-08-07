@@ -1,4 +1,6 @@
 
+
+
 <body style='background-color:black'>
 <div onkeyup='frameBox.srcdoc = `${htmlBox.value}<script>${jsBox.value}<\/script><style>${cssBox.value}</style>`'>
 
@@ -24,10 +26,28 @@ style='width:400px;height:32%;color:skyblue;background-color:#0f0f0f;resize:none
 spellcheck='false'
 ></textarea><br>
 
-<button onclick='frameBox.requestFullscreen()'>Fullscreen</button>
-<button onclick='createBlob()'>CreateBlob</button><br>
-<a id='blobsRES' href
-style='color:white;'>link</a>
+<button onclick='frameBox.requestFullscreen()'
+style='background-color:0f0f0f;color:green'
+>Fullscreen</button>
+<button onclick='createBlob()'
+style='background-color:0f0f0f;color:purple'
+>CreateBlob</button>
+<input 
+  placeholder="type your file here..."
+  style="background-color:#0f0f0f; color:white;" 
+  oninput="Res2.href = this.value"
+> 
+<button
+style='background-color:0f0f0f;cursor:pointer;border:1.5px dimgray outset;box-shadow:dimgray 0px 0px 5px 5px'
+><a id="Res2" href="" >🔍</a></button>
+<br>
+
+<a 
+id='blobsRES' 
+href='#'
+download='MDN-num.html'
+style='color:white;background-color:dimgray;border-radius:4px;border:2px black outset'
+>link</a>
 
 </div>
 
@@ -84,4 +104,12 @@ blobsRES.href = urls;
     
 </script>
 
-<head><title>MDN UPTE 8</title></head>
+<head>
+<title>MDN UPTE 9</title>
+<style>
+#htmlBox,#jsBox,#cssBox,#log,#noteBox{
+scrollbar-width:thin;
+scrollbar-color:#0f0f0f dimgray;
+}
+</style>
+</head>
