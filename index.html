@@ -31,7 +31,15 @@ style='background-color:0f0f0f;color:green'
 >Fullscreen</button>
 <button onclick='createBlob()'
 style='background-color:0f0f0f;color:purple'
->CreateBlob</button>
+>Save-Code</button>
+
+<a 
+id='blobsRES' 
+href='#'
+download='MDN-num.html'
+><button style='color:orange;background-color:#0f0f0f;border-radius:0px;border:2px white outset'>DownLoad</button>
+</a>
+
 <input 
   placeholder="type your file here..."
   style="background-color:#0f0f0f; color:white;" 
@@ -41,14 +49,6 @@ style='background-color:0f0f0f;color:purple'
 style='background-color:0f0f0f;cursor:pointer;border:1.5px dimgray outset;box-shadow:dimgray 0px 0px 5px 5px'
 ><a id="Res2" href="" >🔍</a></button>
 <br>
-
-<a 
-id='blobsRES' 
-href='#'
-download='MDN-num.html'
-style='color:white;background-color:dimgray;border-radius:4px;border:2px black outset'
->link</a>
-
 </div>
 
 <textarea
@@ -92,7 +92,9 @@ left:410px;
 top:8px;
 height:78%'
 sandbox='allow-scripts allow-forms'
-allowFullscreen></iframe>
+allowFullscreen
+srcdoc="<h1>New Version of MDN UPDTE9</h1>"
+></iframe>
 
 <script>
     
@@ -105,7 +107,7 @@ blobsRES.href = urls;
 </script>
 
 <head>
-<title>MDN UPTE 9</title>
+<title>BSDE UPward 9.8</title>
 <style>
 #htmlBox,#jsBox,#cssBox,#log,#noteBox{
 scrollbar-width:thin;
