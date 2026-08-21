@@ -1,6 +1,3 @@
-
-
-
 <body style='background-color:black'>
 <div onkeyup='frameBox.srcdoc = `${htmlBox.value}<script>${jsBox.value}<\/script><style>${cssBox.value}</style>`'>
 
@@ -92,9 +89,7 @@ left:410px;
 top:8px;
 height:78%'
 sandbox='allow-scripts allow-forms'
-allowFullscreen
-srcdoc="<h1>New Version of MDN UPDTE9</h1>"
-></iframe>
+allowFullscreen></iframe>
 
 <details
 style=
@@ -133,19 +128,53 @@ Accurate Errors So Stay Notified<br>
 For more Updates
 </h5>
 </details>
-  
+<div></div>
+<button
+style='
+border: 2px dimgray outset;
+background-color:#0f0f0f;
+color:white;
+position:relative;
+left:475px;
+top:-21px;'
+onclick='htmlBox.requestFullscreen()'
+>Full_HTML</button>
+
+<button
+style='
+border: 2px dimgray outset;
+background-color:#0f0f0f;
+color:skyblue;
+position:relative;
+top:-21px;
+left:475px'
+onclick='jsBox.requestFullscreen()'
+>Full_Js</button>
+
+<button
+style='
+border: 2px dimgray outset;
+background-color:#0f0f0f;
+color:deepskyblue;
+position:relative;
+left:475px;
+top:-21px;'
+onclick='htmlBox.requestFullscreen()'
+>Full_Css</button>
+</div>
 <script>
     
 function createBlob(){
 let blobs = new Blob([frameBox.srcdoc],{type:"text/html"});
 let urls = URL.createObjectURL(blobs);
 blobsRES.href = urls;
-}
-    
+};
+
+let weburl = window.location.href;  
 </script>
 
 <head>
-<title>BSDE UPward 9.8</title>
+<title>MDN UPTE7</title>
 <style>
 #htmlBox,#jsBox,#cssBox,#log,#noteBox{
 scrollbar-width:thin;
