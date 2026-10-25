@@ -1,5 +1,5 @@
 <body style='background-color:black'>
-<div onkeyup='frameBox.srcdoc = `${htmlBox.value}<script>${jsBox.value}<\/script><style>${cssBox.value}</style>`'>
+<div onkeyup='updatePreview()'>
 
 <textarea
 id='htmlBox'
@@ -11,7 +11,6 @@ spellcheck='false'
 <textarea
 id='jsBox'
 placeholder='Javascript'
-onkeyup="try{log.value='';document.write='';new Function(this.value)();}catch(err){log.value=err.message;}"
 style='width:400px;height:33%;color:lightblue;background-color:#0f0f0f;resize:none'
 spellcheck='false'
 ></textarea><br>
@@ -163,11 +162,36 @@ onclick='cssBox.requestFullscreen()'
 >Full_Css</button>
 </div>
 <script>
-    
+
+function updatePreview(){
+    log.value = "";
+    const javascript = jsBox.value.replace(/<\/(script)/gi, "<\\/$1");
+    const css = cssBox.value.replace(/<\/(style)/gi, "<\\/$1");
+    // Install error reporting before any user code runs in the sandbox.
+    frameBox.srcdoc = `<script>
+window.addEventListener("error", function(event) {
+    parent.postMessage({
+        type: "preview-error",
+        message: event.message + "\\n" + event.filename + ":" + event.lineno + ":" + event.colno
+    }, "*");
+});
+<\/script>${htmlBox.value}<script>${javascript}<\/script><style>${css}</style>`;
+}
+
+window.addEventListener("message", function(event){
+    if (event.source !== frameBox.contentWindow || !event.data ||
+        event.data.type !== "preview-error" || typeof event.data.message !== "string") return;
+    log.value += (log.value ? "\n" : "") + event.data.message;
+});
+
+let savedCodeURL;
+
 function createBlob(){
 let blobs = new Blob([frameBox.srcdoc],{type:"text/html"});
 let urls = URL.createObjectURL(blobs);
 blobsRES.href = urls;
+if (savedCodeURL) URL.revokeObjectURL(savedCodeURL);
+savedCodeURL = urls;
 };
 
 let weburl = window.location.href;  
