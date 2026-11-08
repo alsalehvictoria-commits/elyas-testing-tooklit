@@ -6,7 +6,7 @@
 Built with 💪 by **Elyas, 10 year old dev** from 10 Year Old Bros Studio
 
 ## ✨ What's Inside
-- `BSDE10` - Bug Squasher & Debugging Engine
+- `BSDE10` - Read as `BrOs Studio Developing Environment`
 - `Utility Apps` - Tools to help kids learn to code
 - `Testing Tools` - Practice coding and find bugs
 
