@@ -1,12 +1,6 @@
 <head>
 <title>BSDE UPward 10</title>
 <link rel="icon" href="BSDElogo.png">
-<style>
-#htmlBox,#jsBox,#cssBox,#log,#noteBox{
-scrollbar-width:thin;
-scrollbar-color:#0f0f0f dimgray;
-}
-</style>
 </head>
 
 <body style='background-color:black'>
@@ -15,7 +9,7 @@ scrollbar-color:#0f0f0f dimgray;
 <textarea
 id='htmlBox'
 placeholder='HTML'
-style='width:400px;height:33%;color:white;background-color:#0f0f0f;resize:none'
+style='width:400px;height:33vh;color:white;background-color:#0f0f0f;resize:none'
 spellcheck='false'
 ></textarea><br>
 
@@ -23,22 +17,22 @@ spellcheck='false'
 id='jsBox'
 placeholder='Javascript'
 onkeyup="try{log.value='';document.write='';new Function(this.value)();}catch(err){log.value=err.message;}"
-style='width:400px;height:33%;color:lightblue;background-color:#0f0f0f;resize:none'
+style='width:400px;height:33vh;color:lightblue;background-color:#0f0f0f;resize:none'
 spellcheck='false'
 ></textarea><br>
 
 <textarea
 id='cssBox'
 placeholder='CSS'
-style='width:400px;height:32%;color:skyblue;background-color:#0f0f0f;resize:none'
+style='width:400px;height:32vh;color:skyblue;background-color:#0f0f0f;resize:none'
 spellcheck='false'
 ></textarea><br>
 
 <button onclick='frameBox.requestFullscreen()'
-style='background-color:0f0f0f;color:green'
+style='background-color:#0f0f0f;color:green'
 >Fullscreen</button>
 <button onclick='createBlob()'
-style='background-color:0f0f0f;color:purple'
+style='background-color:#0f0f0f;color:purple'
 >Save-Code</button>
 
 <a 
@@ -54,7 +48,7 @@ download='MDN-num.html'
   oninput="Res2.href = this.value"
 > 
 <button
-style='background-color:0f0f0f;cursor:pointer;border:1.5px dimgray outset;box-shadow:dimgray 0px 0px 5px 5px'
+style='background-color:#0f0f0f;cursor:pointer;border:1.5px dimgray outset;box-shadow:dimgray 0px 0px 5px 5px'
 ><a id="Res2" href="" >🔍</a></button>
 <br>
 </div>
@@ -63,10 +57,10 @@ style='background-color:0f0f0f;cursor:pointer;border:1.5px dimgray outset;box-sh
 id='noteBox'
 placeholder='Notes/Hint: type"@/show" To give all your code in this box '
 style='position:absolute;
-top:80.1%;
+top:80.1vh;
 width:452px;
-height:17%;
-left:410px;
+height:18vh;
+left:420px;
 color:green;
 resize:none;
 background-color:#0f0f0f'
@@ -79,10 +73,10 @@ id='log'
 placeholder='Console'
 readonly
 style='position:absolute;
-top:80.1%;
+top:80.1vh;
 width:452px;
-height:17%;
-left:865px;
+height:18vh;
+left:885px;
 color:red;
 resize:none;
 outline:none;
@@ -94,11 +88,11 @@ onkeyup='if(this.value==="@/show"){this.value =frameBox.srcdoc}'
 <iframe
 id='frameBox'
 style='background-color:white;
-width:900px;
+width:920px;
 position:absolute;
-left:410px;
+left:420px;
 top:8px;
-height:78%'
+height:78vh'
 sandbox='allow-scripts allow-forms'
 allowFullscreen></iframe>
 
@@ -173,13 +167,14 @@ top:-21px;'
 onclick='cssBox.requestFullscreen()'
 >Full_Css</button>
 </div>
-<script>
-    
-function createBlob(){
+<script>function createBlob(){
 let blobs = new Blob([frameBox.srcdoc],{type:"text/html"});
 let urls = URL.createObjectURL(blobs);
 blobsRES.href = urls;
 };
 
-let weburl = window.location.href;  
-</script>
+let weburl = window.location.href; </script><style>#htmlBox,#jsBox,#cssBox,#log,#noteBox{
+scrollbar-width:thin;
+scrollbar-color:#0f0f0f dimgray;
+font-size:1.5vh
+}</style>
