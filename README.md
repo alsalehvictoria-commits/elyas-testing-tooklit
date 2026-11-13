@@ -1,28 +1,40 @@
-# 🚀 BROS Toolkit
+# BSDE UPward 10 - Custom Code Editor
+Built by Elyas | Age 10
 
-**BROS = Bros Repository Of Stuff**
+## About
+I built this code editor because I wanted to code even when there's no internet.
+Started with MDN Playground, then created my own offline editor.
 
-### An Offline Developer Toolkit by Elyas
-Built with 💪 by **Elyas, 10 year old dev** from 10 Year Old Bros Studio
+## Features ✨
+- Live HTML, CSS, JavaScript Preview
+- Save & Download code as .html using Blob API
+- Built-in Console for JS errors
+- Fullscreen Mode for Editor and Output
+- Works 100% OFFLINE
+- Dark Theme UI
+- Notes/Hint Box with "@/show" command
 
-## ✨ What's Inside
-- `BSDE10` - Read as `BrOs Studio Developing Environment`
-- `Utility Apps` - Tools to help kids learn to code
-- `Testing Tools` - Practice coding and find bugs
+## Tech Stack
+- HTML5
+- CSS3 
+- JavaScript
+- DOM Manipulation
+- Blob API
+- iframe srcdoc
 
-## 👦 About Elyas
-Hi! I'm **Elyas**. 
-I started learning to code 4 months ago using our 20-year-old PC. 
-This project is my first big tool to practice coding and help other **kids-who-code**.
+## How to Use
+1. Type your HTML in the HTML box
+2. Type your CSS in the CSS box  
+3. Type your JavaScript in the JS box
+4. See live preview on the right
+5. Click "Save-Code" then "Download" to save your file
+6. Type "@/show" in Notes box to see all your code
 
-Everything here is made with **passion, curiosity, and lots of testing** ❤️
+## My Journey
+Age: 10
+Skills: Python, HTML, CSS, JavaScript
+Python Result: EXCELLENT IN ALL - 2nd Month
+Other Project: EMAphone - Custom Phone UI with games
 
-## 🛠️ Tech Stack
-`HTML` `CSS` `JavaScript` `Developer-Tools`
-
-## 📚 Learn & Contribute
-Made for kids, by a kid. 
-If you want to learn coding, start here!
-
----
-*Proudly built by 10 Year Old Bros Studio*
+## Creator
+Elyas - Future Full Stack Devel in the making 
